@@ -1,0 +1,18 @@
+package com.cyf.tool;
+
+import java.awt.*;
+
+//这个类是游戏元素的父类
+public class Tools {
+    //获取背景图片
+    public static Image bgImage= Toolkit.getDefaultToolkit().getImage("photo/background.jpg");
+    //获取boss图片
+    public static Image bossImage= Toolkit.getDefaultToolkit().getImage("photo/boss.png");
+    //获取爆炸图片
+    public static Image boom10Image= Toolkit.getDefaultToolkit().getImage("photo/boom/e10.gif");
+    public static Image boom6Image= Toolkit.getDefaultToolkit().getImage("photo/boom/e6.gif");
+    public static Image boom5Image= Toolkit.getDefaultToolkit().getImage("photo/boom/e5.gif");
+    //获取我放飞机图片
+    public static Image planeImage= Toolkit.getDefaultToolkit().getImage("photo/plane.png");
+
+}
