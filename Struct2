@@ -1,0 +1,48 @@
+package com.cyf;
+
+import com.cyf.tool.Tools;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class GameOn extends JFrame {
+    //记录游戏状态的变量
+    //0未开始，1游戏中，2暂停，3失败，4成功
+    int state = 0;
+    public void launch(){
+        //窗口是否可见
+        this.setVisible(true);
+        //窗口的大小
+        this.setSize(2200,1000);
+        //窗口的位置
+        this.setLocationRelativeTo(null);
+        //窗口的标题
+        this.setTitle("3组作业—飞机大战");
+        //关闭窗口会自动结束进程
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        if(state==0) {
+            g.drawImage(Tools.bgImage, 0, 0, null);
+            g.drawImage(Tools.boom10Image, 900, 500, null);
+            g.drawImage(Tools.boom10Image, 800, 270, null);
+            g.drawImage(Tools.boom6Image, 700, 100, null);
+            g.drawImage(Tools.boom6Image, 800, 300, null);
+            g.drawImage(Tools.boom5Image, 900, 420, null);
+            g.drawImage(Tools.boom5Image, 800, 500, null);
+            g.drawImage(Tools.planeImage, 900, 900, null);
+            g.drawImage(Tools.bossImage, 800, 70, null);
+            //绘制开始界面的文字
+            g.setColor(Color.GREEN);
+            g.setFont(new Font("仿宋", Font.BOLD, 30));
+            g.drawString("点击屏幕开始游戏", 800, 600);
+        }
+    }
+
+    public static void main(String[] args) {
+        GameOn g=new GameOn();
+        g.launch();
+    }
+}
