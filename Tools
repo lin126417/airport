@@ -1,0 +1,8 @@
+package com.cyf.game;
+
+import java.awt.*;
+
+public class Tools {
+    //获取背景图片
+    public static Image bdImg = Toolkit.getDefaultToolkit().getImage("photo/background.jpg");
+}
