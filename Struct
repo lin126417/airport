@@ -1,0 +1,22 @@
+package com.cyf.game;
+import javax.swing.*;
+public class GameOn extends JFrame {
+    public void launch(){
+        //窗口是否可见
+        this.setVisible(true);
+        //窗口的大小
+        this.setSize(800,600);
+        //窗口的位置
+        this.setLocationRelativeTo(null);
+        //窗口的标题
+        this.setTitle("三组作业-飞机大战");
+        //关闭窗口会自动结束
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+
+    public static void main(String[] args) {
+        GameOn gameon = new GameOn();
+        gameon.launch();
+    }
+}
