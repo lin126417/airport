@@ -5,14 +5,55 @@
   <title>用户反馈</title>
 </head>
 <style>
+  body {
+    background-color: lightskyblue;
+    background-image: url('https://img.zcool.cn/community/0104375b98a43ca8012017ee84ec74.jpg@3000w_1l_0o_100sh.jpg');
+    font-family: Arial, sans-serif;
+  }
 
+  h1 {
+    text-align: center;
+  }
 
-body {background-color: lightskyblue;background-image:url('https://img.zcool.cn/community/0104375b98a43ca8012017ee84ec74.jpg@3000w_1l_0o_100sh.jpg');}
+  form {
+    width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
 
+  p {
+    margin-bottom: 10px;
+  }
+
+  .txt {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
 </style>
 <body>
-<h1 align="center">用户反馈表单</h1>
-<form align="center" method="post">
+<h1>用户反馈表单</h1>
+<form method="post">
   <p>
     姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
     <input type="text" class="txt" size="12" maxlength="20" name="username"/>
@@ -39,12 +80,20 @@ body {background-color: lightskyblue;background-image:url('https://img.zcool.cn/
     <input type="text" class="txt" name="address"/>
   </p>
   <p>
-    请输入您对本游戏的建议或问题：
+    请输入您在游戏过程中遇到了什么问题：
     <br/>
     <textarea name="your_suggestion" cols="50" rows="5"></textarea>
     <br/>
-    <input type="submit" name="submit" value="提交"/>
-    <input type="reset" name="reset" value="清除"/>
+
+    <input type="submit" name="submit" value="提交" onclick="MsgBox()" />
+    <a href = "game.html">返回</a>
+    <script language="javascript">
+      function MsgBox() //声明标识符
+      {
+        alert("感谢您的反馈，我们一定会做的更好"); //弹出对话框
+      }
+    </script>
+
   </p>
 
 </form>
